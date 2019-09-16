@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC  
+   "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+   "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="mainTemplate" template="/JSP/layout/mainLayout.jsp">
+		<put-attribute name="title" value="Asset Details"></put-attribute>
+		<put-attribute name="header" value="/JSP/layout/assetHeader.jsp"></put-attribute>
+		<put-attribute name="toolBar" value="/JSP/layout/assetToolBar.jsp"></put-attribute>
+		<put-attribute name="sideMenu" value="/JSP/layout/assetSideMenu.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value="/JSP/layout/assetFooter.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="oriTemplate" template="/JSP/layout/mainLayout.jsp">
+		<put-attribute name="title" value="Asset Details"></put-attribute>
+		<put-attribute name="header" value=""></put-attribute>
+		<put-attribute name="toolBar" value=""></put-attribute>
+		<put-attribute name="sideMenu" value=""></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value="/JSP/layout/assetFooter.jsp"></put-attribute>
+	</definition>
+
+	<definition name="BlankScreen" extends="mainTemplate">
+		<put-attribute name="body" value="/JSP/layout/BlankScreen.jsp"></put-attribute>
+	</definition>
+
+	<definition name="AssetHard" extends="mainTemplate">
+		<put-attribute name="body" value="/JSP/AssetHardware/AssetHard.jsp"></put-attribute>
+
+	</definition>
+
+
+	<definition name="AssetHardFailed" extends="mainTemplate">
+		<put-attribute name="body"
+			value="/JSP/AssetHardware/AssetHardFailed.jsp"></put-attribute>
+	</definition>
+
+	<definition name="AssetSoft" extends="mainTemplate">
+		<put-attribute name="body" value="/JSP/AssetSoftware/AssetSoft.jsp"></put-attribute>
+	</definition>
+
+	<definition name="AssetSoftFailed" extends="mainTemplate">
+		<put-attribute name="body"
+			value="/JSP/AssetSoftware/AssetSoftFailed.jsp"></put-attribute>
+	</definition>
+
+	<definition name="AssetVendor" extends="mainTemplate">
+		<put-attribute name="body" value="/JSP/AssetVendor/AssetVendor.jsp"></put-attribute>
+	</definition>
+
+	<definition name="AssetVendorFailed" extends="mainTemplate">
+		<put-attribute name="body"
+			value="/JSP/AssetVendorFailed/AssetVendorFailed.jsp"></put-attribute>
+	</definition>
+
+	<definition name="ServiceTrack" extends="mainTemplate">
+		<put-attribute name="body"
+			value="/JSP/ServiceTracking/ServiceTrack.jsp"></put-attribute>
+	</definition>
+
+	<definition name="ServiceTrackFailed" extends="mainTemplate">
+		<put-attribute name="body"
+			value="/JSP/ServiceTracking/ServiceTrackFailed.jsp"></put-attribute>
+	</definition>
+
+	<definition name="AssetAttachments" extends="mainTemplate">
+		<put-attribute name="body"
+			value="/JSP/AssetAttachments/AssetAttachments.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="AssetAttachmntsFailed" extends="mainTemplate">
+		<put-attribute name="body"
+			value="/JSP/AssetAttachments/AssetAttachmentFailed.jsp"></put-attribute>
+	</definition>
+
+	<definition name="site.Filenotfound" extends="mainTemplate">
+		<put-attribute name="screentitle" value="Asset Details" />
+		
+		<put-attribute name="header" value=""></put-attribute>
+		<put-attribute name="toolBar" value=""></put-attribute>
+		<put-attribute name="sideMenu" value=""></put-attribute>		
+		<put-attribute name="footer" value=""></put-attribute>		
+		<put-attribute name="body" value="/JSP/FileNotFound.jsp" />
+	</definition>
+	
+	<definition name="site.sessionXp" extends="oriTemplate"> 	
+		<put-attribute name="body" value="/DBError.jsp" />
+	</definition>
+	
+	
+	<definition name="site.invalidDb" extends="mainTemplate">
+		<put-attribute name="screentitle" value="Asset Details" />
+		
+		<put-attribute name="header" value=""></put-attribute>
+		<put-attribute name="toolBar" value=""></put-attribute>
+		<put-attribute name="sideMenu" value=""></put-attribute>		
+		<put-attribute name="footer" value=""></put-attribute>		
+		<put-attribute name="body" value="/JSP/DBSocket.jsp" />
+	</definition>
+	
+	
+	<definition name="site.invalidToken" extends="mainTemplate">
+		<put-attribute name="screentitle" value="Asset Details" />
+		
+		<put-attribute name="header" value=""></put-attribute>
+		<put-attribute name="toolBar" value=""></put-attribute>
+		<put-attribute name="sideMenu" value=""></put-attribute>		
+		<put-attribute name="footer" value=""></put-attribute>		
+		<put-attribute name="body" value="/JSP/invalidToken.jsp" />
+	</definition>
+
+
+</tiles-definitions>

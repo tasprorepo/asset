@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+   <constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
+   <constant name="struts.devMode" value="true"></constant>
+   <constant name="struts.action.extension" value="do"/>
+   <constant name="struts.custom.i18n.resources" value="applicationresource"/>
+   
+    <package name="default" extends="struts-default">
+     
+      <result-types>
+           <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"></result-type>
+      </result-types>      
+      
+      <action name="LoginPreAction" class="com.asset.preaction.LoginPreAction">
+            <result name="success">/JSP/Login/Login.jsp</result>
+            <result name="sessionExpired" type="tiles">site.sessionXp</result>
+            <result name="invalid.token" type="tiles">site.invalidToken</result>
+            <result name="invalid.DB" type="tiles">site.invalidDb</result>
+            
+      </action>
+                
+      <action name="LoginProcess" class="com.asset.dispatch.LoginProcess">
+            <result name="success" type="tiles">BlankScreen</result>
+            <result name="failed" >/JSP/Login/Login.jsp</result>
+                  <result name="sessionExpired" type="tiles">site.sessionXp</result>
+            <result name="invalid.token" type="tiles">site.invalidToken</result>
+            <result name="invalid.DB" type="tiles">site.invalidDb</result>
+      </action>  
+      
+      <action name="AssetHardPre" class="com.asset.preaction.AssetHardwarePre">
+            <result name="success" type="tiles">AssetHard</result>
+            <result name="failed" type="tiles">AssetHardFailed</result>
+            <result name="sessionExpired"  type="tiles">site.sessionXp</result>
+            <result name="invalid.token" type="tiles">site.invalidToken</result>
+            <result name="invalid.DB" type="tiles">site.invalidDb</result>
+      </action>
+      
+      <action name="asstHdWareCUDOpern" method="assetHardwareCUDOpern" class="com.asset.dispatch.AssetHardwareDispatchAction">
+            <result name="success" type="tiles">AssetHard</result>
+            <result name="failed" type="tiles">AssetHardFailed</result>
+            <result name="sessionExpired" type="tiles">site.sessionXp</result>
+            <result name="invalid.token" type="tiles">site.invalidToken</result>
+            <result name="invalid.DB" type="tiles">site.invalidDb</result>
+      </action>
+<!--       <action name="asstHdWareExportOpern"  class="com.asset.utils.WriteExcelDemo"> -->
+<!--             <result name="success" type="tiles">AssetHard</result> -->
+<!--             <result name="failed" type="tiles">AssetHardFailed</result> -->
+<!--             <result name="sessionExpired" type="tiles">site.sessionXp</result> -->
+<!--             <result name="invalid.token" type="tiles">site.invalidToken</result> -->
+<!--             <result name="invalid.DB" type="tiles">site.invalidDb</result> -->
+<!--       </action> -->
+    																	
+    <action name="asstAttachmntCUDOpern" method="asstAttachmntCUDOpern" class="com.asset.dispatch.AssetAttachmnttDispatchAction">
+            <result name="success" type="tiles">AssetAttachments</result>
+            <result name="failed" type="tiles">AssetAttachmntsFailed</result>
+                  <result name="sessionExpired" type="tiles">site.sessionXp</result>
+            <result name="invalid.token" type="tiles">site.invalidToken</result>
+            <result name="invalid.DB" type="tiles">site.invalidDb</result>
+      </action>
+    
+      <action name="AssetSoftPre" class="com.asset.preaction.AssetSoftwarePre">
+            <result name="success" type="tiles">AssetSoft</result>
+            <result name="failed" type="tiles">AssetSoftFailed</result>
+                  <result name="sessionExpired" type="tiles">site.sessionXp</result>
+            <result name="invalid.token" type="tiles">site.invalidToken</result>
+            <result name="invalid.DB" type="tiles">site.invalidDb</result>
+      </action>
+      
+      <action name="assetSftwareCUDOpern" method="assetSoftwareCUDOpern" class="com.asset.dispatch.AssetSoftwareDispatchAction">
+            <result name="success" type="tiles">AssetSoft</result>
+            <result name="failed" type="tiles">AssetSoftFailed</result>
+                  <result name="sessionExpired" type="tiles">site.sessionXp</result>
+            <result name="invalid.token" type="tiles">site.invalidToken</result>
+            <result name="invalid.DB" type="tiles">site.invalidDb</result>
+      </action>
+      
+       <action name="assetVendorInsert" method="assetVendorInsert" class="com.asset.dispatch.AssetVendorDispatchAction">
+            <result name="success" type="tiles">AssetVendor</result>
+            <result name="failed" type="tiles">AssetVendorFailed</result>
+                  <result name="sessionExpired" type="tiles">site.sessionXp</result>
+            <result name="invalid.token" type="tiles">site.invalidToken</result>
+            <result name="invalid.DB" type="tiles">site.invalidDb</result>
+      </action>
+      
+      
+      <action name="assetVendorUpdate" method="assetVendorUpdate" class="com.asset.dispatch.AssetVendorDispatchAction">
+            <result name="success" type="tiles">AssetVendor</result>
+            <result name="failed" type="tiles">AssetVendorFailed</result>
+            <result name="sessionExpired" type="tiles">site.sessionXp</result>
+            <result name="invalid.token" type="tiles">site.invalidToken</result>
+            <result name="invalid.DB" type="tiles">site.invalidDb</result>
+      </action>
+      
+      <!-- Poovathi write delete actions in struts.xml File -->
+      
+      <action name="assetVendorDelete" method="assetVendorDelete" class="com.asset.dispatch.AssetVendorDispatchAction">
+            <result name="success" type="tiles">AssetVendor</result>
+            <result name="failed" type="tiles">AssetVendorFailed</result>
+            <result name="sessionExpired" type="tiles">site.sessionXp</result>
+            <result name="invalid.token" type="tiles">site.invalidToken</result>
+            <result name="invalid.DB" type="tiles">site.invalidDb</result>
+      </action>
+      
+      <!--END....................................................-->
+      
+      
+      
+      <action name="ServTRCUDOpern" method="ServiceTrackerCUDOpern" class="com.asset.dispatch.ServiceTrackeDispatchAction">
+            <result name="success" type="tiles">ServiceTrack</result>
+            <result name="failed" type="tiles">ServiceTrackFailed</result>
+      </action>
+      
+      <action name="AssetVenPre" class ="com.asset.preaction.AssetVendorPre">
+            <result name="success" type="tiles">AssetVendor</result>
+            <result name="failed" type="tiles">AssetVendorFailed</result>
+                  <result name="sessionExpired" type="tiles">site.sessionXp</result>
+            <result name="invalid.token" type="tiles">site.invalidToken</result>
+            <result name="invalid.DB" type="tiles">site.invalidDb</result>
+      </action>
+      
+      <action name="ServiceTrackPre" class ="com.asset.preaction.ServiceTrackingPre">
+            <result name="success" type="tiles">ServiceTrack</result>
+            <result name="failed" type="tiles">ServiceTrackFailed</result>
+                  <result name="sessionExpired" type="tiles">site.sessionXp</result>
+            <result name="invalid.token" type="tiles">site.invalidToken</result>
+            <result name="invalid.DB" type="tiles">site.invalidDb</result>
+       </action>
+           
+      <action name="AssetAttachmentsPre" class ="com.asset.preaction.AssetAttachmentsPre">
+            <result name="success" type="tiles">AssetAttachments</result>
+        <!--     <result name="failed" type="tiles">AssetAttachmentsFailed</result> -->
+              <result name="sessionExpired" type="tiles">site.sessionXp</result>
+            <result name="invalid.token" type="tiles">site.invalidToken</result>
+            <result name="invalid.DB" type="tiles">site.invalidDb</result>
+      </action>
+      
+    <action name="FeedbackDownloadFile" method="dwnlodAttachments" class="com.asset.dispatch.AssetAttachmnttDispatchAction">
+	<result name="success"></result>
+	<result name="filenotfound" type="tiles">site.Filenotfound</result>
+	<!-- <result name="sessionExpired" type="tiles">site.DBSessionExpiry</result> -->
+	<result name="invalid.DB" type="tiles">site.DBSocketError</result>		
+ </action>
+     
+    </package>
+    
+    <constant name="struts.multipart.maxSize" value="1000000000" />
+    <!-- <constant name="struts.multipart.saveDir" value="/usr/fpits/" /> -->
+     
+
+</struts>
