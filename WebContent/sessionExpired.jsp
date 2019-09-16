@@ -8,6 +8,7 @@
 			<div class="panel-body" style="text-align: center;">
 				<h1>Session Timeout</h1>
 				<h2>Your Session has been Expired. Please Try Again .</h2>
+				<!-- Change the message content here -->
 				<br /> <br />
 			</div>
 			<div class="panel-footer panel-footer-primary"
