@@ -1,0 +1,39 @@
+ /* Styles go here */
+
+    .menu_sample {
+      position: absolute;
+      
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      border: solid 1px #eee;
+      transition: transform 0.1s ease-out;
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding: 10px;
+      transition: left 1s ease-out;
+      margin-left: -2%;
+      margin-top: 150%;
+    }
+
+    /*transition*/
+    .top_mar {
+        margin-top: 5%;
+    }
+
+    /* on toggle*/
+    .content.pushed {
+      left: 100px;
+    }
+
+    .hide {
+      transform:translateX( -100px);
+    } 
