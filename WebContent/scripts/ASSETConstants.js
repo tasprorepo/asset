@@ -39,7 +39,7 @@ var CONSTANTS_VAR =
     //Validation for ServiceTracking
     KEYIN_HD_NAME       : 'Please keyin Hardware Name',
     KEYIN_SW_NAME       : 'Please Keyin Software Name',
-    KEYIN_VD_REP		: 'Please Keyin Vendor Name',
+    KEYIN_VD_REP		: 'Please Keyin Vendor Rep',
     KEYIN_VD_NAME       : 'Please Keyin Vendor Name',
     KEYIN_VD_EMAIL       : 'Please Keyin Vendor Email',
     KEYIN_SERVC_REQ     : 'Please Keyin Service Request',

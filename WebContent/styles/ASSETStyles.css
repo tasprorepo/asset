@@ -45,14 +45,6 @@ body.loading .modal {
    display:inline-block;
 }
 
-
-
-
-
-
-
-
-
 .ui-tabs-vertical { 
 	width: 99%;
 	height: 100% 
@@ -252,7 +244,7 @@ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);height: 22px;background: #fff;color: #
 }
 .scrollModelBodyWidth1000{
 	/*max-width:1500px;*/
-	width:1200px;
+	width:1250px;
 }
  
  .fieldsetClsborder{
@@ -263,7 +255,30 @@ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);height: 22px;background: #fff;color: #
 	border-radius:6px;
 }
 
+.fieldset
+{
+	
+	border:1px solid #dddfe0;
+	width:95%;
+	border-radius:6px;
+	padding-left:20px;
+}
+.vndrAddrfieldset{
+	
+    border: 1px solid #dddfe0;
+    width: 90%;
+    border-radius: 6px;
+    padding-left: 20px;
+    height:321px;
+}
 
+.VndrContfieldset{
+border: 1px solid #dddfe0;
+    padding-left: 20px;
+    width: 95%;
+    height: 319px;
+    border-radius: 6px;
+  }
 
 .fieldsetborder
 {

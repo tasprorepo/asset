@@ -332,10 +332,11 @@ function toolBarSrchFun()
 	searchVendorRecords();
 }
 
+//search vendor details function ......
 
 function searchVendorRecords() 
 {  
-//	showLoader();
+	showLoader();
 	
 	
 //	if(avadsid == "null")
@@ -351,7 +352,7 @@ var vendorName = $('#txtFldSrchVDName').val();
 	if(isEmptyFld(vendorName))
 	{
 		showAlert(CONSTANTS_VAR.SEL_ANYSRCH_CRIT,$('#txtFldSrchVDName'));  
-//	     hideLoader();
+        hideLoader();
 		return;
 		
 	}
@@ -365,7 +366,16 @@ var vendorName = $('#txtFldSrchVDName').val();
 	var data = assetAjax(param);
 	
 	addVendorDetails(data);
+	
+	setTimeout(() => {
+		hideLoader();
+	}, 1000)
 }
+
+
+
+
+
 
 function addVendorDetails(responce)
 {
@@ -398,7 +408,7 @@ function addVendorDetails(responce)
 			cell2.childNodes[0].style.textAlign = 'center';
 
 			var cell3 = row.insertCell(3);
-			cell3.innerHTML = '<img src="styles/images/searchicon.png" align="center" width="30%" id="openvendordetail" title="Click To View Vendor Details"  onclick="viewVendorTblRows(this);" />'+'<input type="hidden" name="txtFldAsstVDMastrId" id="txtFldAsstVDMastrId"  value="'+ chkNull(responce[asset]["txtFldAsstVDMastrId"])+ '" />';
+			cell3.innerHTML = '<img src="styles/images/searchicon.png" align="center" width="30%" id="openvendordetail" title="Click To View Vendor Details"  onclick="viewVendorTblRows(this);showLoader();" />'+'<input type="hidden" name="txtFldAsstVDMastrId" id="txtFldAsstVDMastrId"  value="'+ chkNull(responce[asset]["txtFldAsstVDMastrId"])+ '" />';
 			cell3.childNodes[0].style.margin = '0  0 0 32px'; 
 			
 			var cell4 = row.insertCell(4);
@@ -441,10 +451,18 @@ function toolBarSaveFun()
 
 function assetCUDOpern()
 {
-    if(!validateVendorDets())
+   /* if(!validateVendorDets())
      {
-       showAlert(CONSTANTS_VAR.NO_ROWS);
-     }
+       showAlert(CONSTANTS_VAR.KEYIN_VD_REP);
+       
+     }*/
+	var vendorRep=($('#txtFldServiceVendrRep').val()) ;
+	var vendorName=($('#txtFldAsstVDServiceName').val());
+	var Email=($('#txtFldAsstVDServiceEmail').val());
+    if((vendorRep == '')||(vendorName == '')||(Email== ''))
+    {
+	validateVendorDets();
+    }
     else
     	{
  
@@ -730,9 +748,9 @@ function assetAjax(param) {
 }
 
  function viewVendorTblRows(id) {
-	
-		
-	var td=id.parentNode;
+	 
+//	 showLoader();
+	 var td=id.parentNode;
 //	alert(id.parentNode);
 	var tr=td.parentNode
 	var MastervendorId= tr.cells[3].childNodes[1].value;
@@ -740,7 +758,14 @@ function assetAjax(param) {
 	var param = "hActionType=SUBVDSEARCH&txtFldAsstVDMastrId="+encodeURIComponent(MastervendorId);
 //	alert(param);
 	var data = assetAjax(param);
+	
 	populateAssetVendorTbl(data);
+	
+	setTimeout(() => {
+		hideLoader();
+		
+	}, 800);
+	
 	navToVendor();
 }
  

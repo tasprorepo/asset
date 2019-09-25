@@ -22,7 +22,7 @@ label {
   display: block;
   margin-bottom: 3px;
   padding-left: 15px;
-  
+  /* text-indent: 20px;   commented by poovathi 26/09/2019*/
 }
 
 .messagepop p, .messagepop.div {

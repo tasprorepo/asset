@@ -2484,7 +2484,7 @@ fieldset {
 }
 legend {
   display: block;
-  width: 35%;
+  width: 42%;
   padding: 2px;
   margin-bottom: 20px;
  /*  font-size: 13px; */
@@ -5877,7 +5877,7 @@ button.close {
 }
 .modal-open .modal {
   overflow-x: hidden;
-  overflow-y: auto;
+  /* overflow-y: auto;  commented by poovathi on 16-09-2019 */
 }
 .modal-dialog {
   position: relative;
@@ -5926,7 +5926,8 @@ button.close {
 }
 .modal-body {
   position: relative;
-  padding: 15px;
+ /*  padding:15px; */
+  padding:  0px 15px 15px 15px;  /* added on 17/09/2019  */
 }
 .modal-footer {
   padding: 15px;

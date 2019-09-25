@@ -14,7 +14,8 @@
    <script type="text/javascript" src="scripts/ASSETConstants.js"></script>
    <script type="text/javascript" src="scripts/CommonScripts.js"></script>
    <script type="text/javascript" src="scripts/ASSETScripts.js"></script>
-<title>Asset Infra Application</title>
+ <title>Asset Infra Application</title> 
+
 <script>
  //Login Screen Asset Infra 
 var browserName=navigator.appName;

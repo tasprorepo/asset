@@ -41,8 +41,8 @@ sess.setAttribute("fpssoid",fpssoid);
              <div class="row">
              <div class="col-md-4">
          <div class="form-group">
-            <label for="txtFldSrchVDName conrtol-label" class="assetLabel">Vendor Name</label>
-              <input type="text" id="txtFldSrchVDName" name="txtFldSrchVDName" class="form-control required"  onmouseover="assetTooltip(this);"/>
+            <label for="txtFldSrchVDName conrtol-label" class="assetLabel" >Vendor Name</label>
+              <input type="text" id="txtFldSrchVDName" name="txtFldSrchVDName" class="form-control required" autocomplete="off"  onmouseover="assetTooltip(this);"/>
          </div> 
          </div>
           <div class="col-md-6"></div>
@@ -132,11 +132,11 @@ sess.setAttribute("fpssoid",fpssoid);
 				       
 					    
 					<!-- </div> VndrOutlineBorder-->
-					<div class="">
-					<div class="col-md-12 fieldsetborder">
+					
+					<div class="col-md-12 ">
                      <div class="row">
                      <div class="col-md-6">
-                   <!--   <fieldset class="fieldsetClsgreyborder col-md-12" style="top: -25px;"> -->
+                     <fieldset class=" fieldset col-md-6">  
                       <legend><i class="fa fa-users" style="color:#067af1;" aria-hidden="true"></i>&nbsp;Vendor Details</legend>
                      <div class="row vertical-divider">  
                       <div class="form-group" style="display:none">
@@ -178,11 +178,11 @@ sess.setAttribute("fpssoid",fpssoid);
 				  </div>
 				  
 				  </div>
-                    <!--   </fieldset> -->
+                       </fieldset> 
                       </div>
                       
                       
-                <div class="col-md-4">
+              <!--   <div class="col-md-4" style="margin-top:25px;">
                       
                         <div class="form-group">
                              <div class="row">
@@ -191,10 +191,10 @@ sess.setAttribute("fpssoid",fpssoid);
                                                      Remarks</label>
                                     </div>
                                     
-                                         <!-- <div class="col-sm-4">
+                                         <div class="col-sm-4">
                                            <input type="text" id="txtFldAsstVDServiceRemarks" name="txtFldAsstVDServiceRemarks"  maxlength="300"class="form-control fld-resp-md required" onmouseover="assetTooltip(this);"/>
                                          </div>
-                                          -->
+                                         
                                          
                                          <div class="col-md-8"> 
                                      <textarea  class="form-control" rows="4" name="txtFldAsstVDServiceRemarks" id="txtFldAsstVDServiceRemarks" cols="35" style="resize:none" onmouseover="assetTooltip(this);"  maxLength="4000" ></textarea>
@@ -202,12 +202,12 @@ sess.setAttribute("fpssoid",fpssoid);
                               </div> 
                        </div> 
                       
-                 </div>
+                 </div> -->
                       
                       
-                       <div class="col-md-2">
+                       <div class="col-md-2" style="margin-top:30px; float:right; margin-right:-78px;">
                        
-                              <div class="btn-group pull-right role="group">
+                              <div class="btn-group role="group">
 								 <span class="btn btn-default navbar-btn"  id="spnAsstVdDel">
 						            <img src="styles/images/delrow.png" width="20px" title="Delete Vendor Details" id="btnFldAssVdDelRow" name="btnFldAssVdDelRow"/>
 					           </span>
@@ -219,11 +219,11 @@ sess.setAttribute("fpssoid",fpssoid);
          </div> <!--col-md-12 end  -->
                       
                       
-                      <div class="col-md-12 fieldsetborder">
+                      <div class="col-md-12 ">
                       
                       <div class="row">
                       <div class="col-md-6">
-                     <!--   <fieldset class="fieldsetClsgreyborder col-md-6" style="top: -25px;"> -->
+                      <fieldset class="vndrAddrfieldset col-md-6"> 
                       <legend> <i class="fa fa-map-marker" style="color:#ff0000;" aria-hidden="true"></i>&nbsp; Address Details </legend>
                      <div class="row vertical-divider">  
                      
@@ -306,11 +306,12 @@ sess.setAttribute("fpssoid",fpssoid);
                       </div> 
                        
 				  </div>
+				  </fieldset>  
 				  </div>
-                      <!-- </fieldset>  -->
+                       
                       <div class="col-md-6">
                       
-                      <!--  <fieldset class="fieldsetClsgreyborder col-md-6" style="top: -25px;height: 285px;left: 2px;"> -->
+                      <fieldset class="VndrContfieldset col-md-6"> 
                       <legend><i class="fa fa-phone-square" style="color:#10af15;" aria-hidden="true"></i>&nbsp; Contact Details </legend>
                       <div class="row vertical-divider">  
                       <div class="form-group">
@@ -339,9 +340,9 @@ sess.setAttribute("fpssoid",fpssoid);
                              onBlur="validateEmail(this.id)" onmouseover="assetTooltip(this);" 
                              class="form-control fld-resp-md required" />	
                       </div>
-                      <div class="col-sm-1" style="margin-left: 30px;"> 
+                      <div class="col-sm-1" style="margin-left: 75px; width:25px; height:25px;padding-top:2px;padding-top:2px;border:1px solid #b5b3b3;padding:5px;border-radius:5px;"> 
                       <a href="mailto:thulasy@avallis.com?Subject=Vendor Service Email From Asset System" target="_top">
-                       		<img src="images/mail.png" width="100%"/>
+                       		<img src="images/mail.png" width="100%" style="margin-bottom:5px;"/>
                        	</a>
                       </div>
                      </div> 
@@ -358,9 +359,9 @@ sess.setAttribute("fpssoid",fpssoid);
                          maxlength="150" onBlur="validateWebsite(this.id)" onchange="openWeblink(this)" onmouseover="assetTooltip(this);" 
                          class="form-control fld-resp-md required" />
                        </div>
-                       <div class="col-sm-1" style="margin-left: 30px;"> 
+                       <div class="col-sm-1"  style="margin-left: 75px; width:25px; height:25px;padding-top:2px;padding-top:2px;border:1px solid #b5b3b3;padding:5px;border-radius:5px;"> 
                       <a id="weblink" style="cursor:pointer">
-                       		<img src=" styles/images/websiteicon.png" width="100%"/>
+                       		<img src=" styles/images/websiteicon.png" width="100%" style="margin-bottom:5px;"/>
                        	</a>
                       </div>
                       
@@ -368,27 +369,27 @@ sess.setAttribute("fpssoid",fpssoid);
                      </div> 
                       
                       
-                     <!--  <div class="form-group">
+                      <div class="form-group">
                       <div class="row">
                       <div class="col-sm-4">
                        <label for="txtFldAsstVDServiceRemarks" class="assetLabel pull-right ">
                        Remarks</label>
                       </div>
-                      <div class="col-sm-4">
-                      <input type="text" id="txtFldAsstVDServiceRemarks" name="txtFldAsstVDServiceRemarks"  maxlength="300"class="form-control fld-resp-md required" onmouseover="assetTooltip(this);"/>
-                      </div>
+                          <div class="col-md-6"> 
+                                     <textarea  class="form-control" rows="4" name="txtFldAsstVDServiceRemarks" id="txtFldAsstVDServiceRemarks" cols="35" style="resize:none" onmouseover="assetTooltip(this);"  maxLength="4000" ></textarea>
+                                      </div>
                       </div> 
-                      </div>  -->
+                      </div>  
                       
                       
                       
                       </div>
                      
-                    <!--   </fieldset> --> 
+                      </fieldset> 
                     </div>
                     </div>
                     </div>
-       </div>             
+                   
                     
                 </div>
 
